@@ -1,0 +1,9 @@
+.menu__item {
+    margin-right: 24px;
+    font-size: 18px;
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

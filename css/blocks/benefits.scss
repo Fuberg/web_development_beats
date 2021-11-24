@@ -1,0 +1,42 @@
+.benefits__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .benefits__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 8px;
+        width: 166px;
+        height: 56px;
+
+        .benefits__icon {
+            display: inline-block;
+            width: 41px; 
+            height: 41px;
+        }
+
+        .benefits__text {
+            display: inline-block;
+            width: 114px;
+            line-height: 1.1;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .benefits__item:nth-of-type(1)>.benefits__icon {
+        background: url(../../img/benefits.png) -10px -10px;
+    }
+
+    .benefits__item:nth-child(2)>.benefits__icon {
+        background: url(../../img/benefits.png) -71px -10px;
+    }
+
+    .benefits__item:nth-child(3)>.benefits__icon {
+        background: url(../../img/benefits.png) -132px -10px;
+    }
+}

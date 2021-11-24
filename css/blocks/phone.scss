@@ -1,0 +1,14 @@
+.phone {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        background: url('../../img/phone_icon.png');
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
+    }
+}

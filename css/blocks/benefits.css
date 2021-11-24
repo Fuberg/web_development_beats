@@ -1,0 +1,47 @@
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.benefits__list .benefits__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+  width: 166px;
+  height: 56px;
+}
+.benefits__list .benefits__item .benefits__icon {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+}
+.benefits__list .benefits__item .benefits__text {
+  display: inline-block;
+  width: 114px;
+  line-height: 1.1;
+}
+.benefits__list .benefits__item:last-child {
+  margin-right: 0;
+}
+.benefits__list .benefits__item:nth-of-type(1) > .benefits__icon {
+  background: url(../../img/benefits.png) -10px -10px;
+}
+.benefits__list .benefits__item:nth-child(2) > .benefits__icon {
+  background: url(../../img/benefits.png) -71px -10px;
+}
+.benefits__list .benefits__item:nth-child(3) > .benefits__icon {
+  background: url(../../img/benefits.png) -132px -10px;
+}

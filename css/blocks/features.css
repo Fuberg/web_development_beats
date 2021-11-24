@@ -1,0 +1,41 @@
+.features .container {
+  padding: 0 80px;
+}
+.features .features__title {
+  margin: 104px auto 0;
+  width: 593px;
+}
+.features .features__subtitle {
+  text-align: center;
+  margin: 18px auto 0;
+  line-height: 1.22;
+  width: 590px;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 63px;
+}
+.features__list .features__item:nth-of-type(1) .feat__icon {
+  background: url(../../img/features.png) -10px -10px;
+}
+.features__list .features__item:nth-child(3) .feat__icon {
+  background: url(../../img/features.png) -98px -10px;
+}
+.features__list .features__item:nth-child(5) .feat__icon {
+  background: url(../../img/features.png) -186px -10px;
+}
+.features__list .features__item:nth-child(2), .features__list .features__item:nth-child(4) {
+  position: relative;
+  width: 70px;
+  height: 24px;
+  background: url(../../img/delimiter_dots.png);
+}

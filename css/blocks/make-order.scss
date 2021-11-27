@@ -1,0 +1,29 @@
+.make-order-section {
+    color: #fff;
+    background: url(../../img/cta.png) center bottom / 100% 100% no-repeat;
+    background-color: #181818;
+    position: relative;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 80px;
+    }
+
+    &::before {
+        content: url(../../img/Polygon.png);
+        position: absolute;
+        top: 0;
+        right: 20%;
+        transform: translateY(-50%);
+    }
+}
+
+.make-order__title {
+    text-align: center;
+}
+
+.make-order__form {
+    margin-top: 50px;
+}

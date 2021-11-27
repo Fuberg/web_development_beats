@@ -7,8 +7,15 @@
     border-radius: 100px;
     background-color: #E01F3D;
     color: #fff;
+    border: 0;
 
     &:hover {
         background-color: #CA1B36;
     }
+}
+
+.btn--transparent {
+    padding: 18px 14px;
+    background-color: transparent;
+    font-weight: normal;
 }

@@ -1,0 +1,133 @@
+.form {
+    display: flex;
+    align-items: flex-start;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &:first-child {
+            margin-right: 27px;
+            width: 49%;
+        }
+
+        &:last-child {
+            flex: 1;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex: 1;
+        margin-top: 11px;
+    }
+
+    &__block {
+        flex: 1;
+        margin-right: 17px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .form__title {
+            font-size: 16px;
+        }
+
+        
+        .form__input {
+            width: 100%;
+            border: 3px solid #fff;
+            outline: none;
+            border-radius: 4px;
+            height: 58px;
+            cursor: pointer;
+            padding: 12px 18px;
+            font-size: 14px;
+
+            &:focus, &:hover {
+                border-color: #E01F3D;
+            }
+
+        }
+
+        .form__input--textarea {
+            height: 150px;
+            resize: none;
+        }
+
+
+    }
+
+    .form__controls {
+        display: flex;
+        flex: 1;
+        margin-top: 22px;
+
+        .radio__input {
+            display: none;
+        }
+
+        .radio__title {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 22px;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                border: 6px solid #fff;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                margin-right: 11px;
+            }
+        }
+
+        .radio__input:checked + .radio__title{
+            &:before {
+              background-color: #CA1B36;
+            }
+        }
+
+        .checkbox__input {
+            display: none;
+        }
+
+        .checkbox__title {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-color: #fff;
+                border-radius: 4px;
+                margin-right: 11px;
+            }
+        }
+
+        .checkbox__input:checked + .checkbox__title{
+            &:before {
+                background: url(../../img/check.png) center center no-repeat;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .form__controls-first {
+        margin-top: 34px;
+    }
+
+    .form__buttons-block {
+        margin-top: 46px;
+    }
+}
+

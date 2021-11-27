@@ -9,6 +9,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 27px 0;
+  width: 100%;
 }
 .header .phone {
   margin-right: 25px;

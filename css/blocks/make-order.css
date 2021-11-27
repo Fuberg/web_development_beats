@@ -1,0 +1,34 @@
+.make-order-section {
+  color: #fff;
+  background: url(../../img/cta.png) center bottom/100% 100% no-repeat;
+  background-color: #181818;
+  position: relative;
+}
+.make-order-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 80px;
+}
+.make-order-section::before {
+  content: url(../../img/Polygon.png);
+  position: absolute;
+  top: 0;
+  right: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.make-order__title {
+  text-align: center;
+}
+
+.make-order__form {
+  margin-top: 50px;
+}

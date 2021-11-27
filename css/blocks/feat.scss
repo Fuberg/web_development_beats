@@ -1,5 +1,5 @@
 .feat {
-    width: 276px;
+    // width: 276px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -28,7 +28,7 @@
     .feat__description {
         margin-top: 7px;
         line-height: 1.22;
-        width: 247px;
+        width: 100%;
         color: #666666;
     }
 }

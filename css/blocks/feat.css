@@ -1,5 +1,4 @@
 .feat {
-  width: 276px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,6 +39,6 @@
 .feat .feat__description {
   margin-top: 7px;
   line-height: 1.22;
-  width: 247px;
+  width: 100%;
   color: #666666;
 }

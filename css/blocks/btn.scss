@@ -1,13 +1,15 @@
 .btn {
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 18px 41px;
+    padding: 1.125rem 2.5625rem;
     line-height: 1;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     background-color: #E01F3D;
     color: #fff;
     border: 0;
+    transition: 0.2s;
+    cursor: pointer;
 
     &:hover {
         background-color: #CA1B36;
@@ -15,7 +17,13 @@
 }
 
 .btn--transparent {
-    padding: 18px 14px;
+    padding: 1.125rem 0.875rem;
     background-color: transparent;
     font-weight: normal;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+        color: #E01F3D;
+    }
 }

@@ -5,12 +5,31 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 27px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1.75rem 0;
   width: 100%;
 }
 .header .phone {
-  margin-right: 25px;
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .header .phone {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 0.625rem;
+  }
 }

@@ -3,6 +3,7 @@
 @import url(./layout/base.css);
 @import url(./blocks/hero.css);
 @import url(./blocks/header.css);
+@import url(./blocks/gamburger.css);
 @import url(./blocks/menu.css);
 @import url(./blocks/phone.css);
 @import url(./blocks/btn.css);
@@ -13,3 +14,6 @@
 @import url(./blocks/interactive-avatar.css);
 @import url(./blocks/form.css);
 @import url(./blocks/make-order.css);
+@import url(./blocks/fixed-menu.css);
+@import url(./blocks/contacts.css);
+@import url(./blocks/socials.css);

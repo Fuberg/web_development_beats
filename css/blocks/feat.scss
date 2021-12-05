@@ -10,25 +10,43 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 128px;
-        height: 128px;
+        width: 8rem;
+        height: 8rem;
         background-color: #F2F5F4;
         border-radius: 50%;
     }
 
     .feat__icon {
-        width: 68px;
-        height: 68px;
+        width: 4.25rem;
+        height: 4.25rem;
     }
+    
+    .feat__text-content {
 
-    .feat__name {
-        margin-top: 24px;
+        .feat__name {
+            margin-top: 1.5rem;
+        }
+        .feat__description {
+            margin-top: 0.5rem;
+            line-height: 1.22;
+            width: 100%;
+            color: #666666;
+        }
     }
+}
+    
 
-    .feat__description {
-        margin-top: 7px;
-        line-height: 1.22;
-        width: 100%;
-        color: #666666;
+@media (max-width: 480px) {
+    .feat {
+        flex-direction: row;
+        text-align: left;
+
+        .feat__icon-wrap {
+            margin-right: 0.75rem;
+        }
+
+        .feat__text-content {
+            max-width: 68%;
+        }
     }
 }

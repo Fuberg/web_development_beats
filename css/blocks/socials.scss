@@ -1,0 +1,23 @@
+.socials__list {
+    display: flex;
+    justify-content: center;
+
+    .socials__item {
+        margin-right: 0.625rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .socials__image {
+            width: 1.875rem;
+            height: 1.875rem;
+            fill: #B3B3B3;
+            transition: 0.3s;
+
+            &:hover {
+                fill: #000;
+            }
+        }
+    }
+}

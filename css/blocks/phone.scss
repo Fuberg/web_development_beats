@@ -1,14 +1,35 @@
 .phone {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 
-    &:before {
-        content: "";
-        display: inline-block;
-        background: url('../../img/phone_icon.png');
-        width: 14px;
-        height: 14px;
-        margin-right: 6px;
+    &__number {
+        white-space: nowrap;
+    }
+
+    &__image {
+        width: 0.875rem;
+        height: 0.875rem;
+        margin-right: 0.375rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .phone {
+        color: #E01F3D;
+
+        &__image {
+            fill: #E01F3D;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .phone {
+        color: #000;
+
+        &__image {
+            fill: #000;
+        }
     }
 }

@@ -1,9 +1,29 @@
+.menu {
+    margin: 0 30px;
+    padding-top: 5px;
+}
+
+.menu__list {
+    flex-wrap: wrap;
+}
+
 .menu__item {
-    margin-right: 24px;
-    font-size: 18px;
+    margin-right: 1.5rem;
+    font-size: 1.125rem;
     font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    margin-top: 5px;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    .menu__link {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
     }
 }

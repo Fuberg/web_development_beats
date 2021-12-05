@@ -8,7 +8,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 80px;
+        padding: 0 5rem;
     }
 
     &::before {
@@ -25,5 +25,39 @@
 }
 
 .make-order__form {
-    margin-top: 50px;
+    margin-top: 3.125rem;
+}
+
+@media (max-width: 768px) {
+
+    .make-order-section {
+
+        .container {
+            padding: 0 0.625rem;
+        }
+    
+        &::before {
+            right: 10%;
+        }
+    }
+
+    .make-order__form {
+        margin-top: 1.125rem;
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .make-order-section {
+    
+        &::before {
+            right: 10%;
+        }
+    }
+
+    .make-order__form {
+        margin-top: 1.125rem;
+        padding: 0 0;
+    }
 }

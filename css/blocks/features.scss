@@ -1,6 +1,6 @@
 .features {
     .container {
-        padding: 0 80px;
+        padding: 2rem 5rem;
     }
 
     .features__title {
@@ -11,7 +11,7 @@
 
     .features__subtitle {
         text-align: center;
-        margin: 18px auto 0;
+        margin: 1.125rem auto 0;
         line-height: 1.22;
         width: 62%;
     }
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 63px;
+    margin-top: 4rem;
 
     .features__item {
         flex: 1;
@@ -31,7 +31,7 @@
         &:before {
             content: url("../../img/delimiter_dots.png");
             position: absolute;
-            top: 60px;
+            top: 3.75rem;
             right: 0;
             transform: translateX(50%);
         }
@@ -47,18 +47,54 @@
                 display: none;
             }
         }      
+    }
+}
 
-        &:nth-of-type(1) .feat__icon {
-            background: url(../../img/features.png) -10px -10px;
+@media (max-width: 768px) {
+    .features {
+        .container {
+            padding: 0 0.75rem;
         }
 
-        &:nth-of-type(2) .feat__icon {
-            background: url(../../img/features.png) -98px -10px;
+        .features__title {
+            margin: 0 auto;
+            max-width: 80%;
+            text-align: center;
+        }
+    
+        .features__subtitle {
+            text-align: center;
+            margin: 1.125rem auto 0;
+            line-height: 1.22;
+            width: 80%;
         }
 
-        &:nth-of-type(3) .feat__icon {
-            background: url(../../img/features.png) -186px -10px;
+        .features__item {
+
+            &::before {
+                display: none;
+            }
         }
-        
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        .features__title {
+            max-width: 100%;
+        }
+    
+        .features__subtitle {
+            margin: 0.75rem auto 0;
+            width: 100%;
+        }
+    }
+
+    .features__list {
+        flex-direction: column;
+
+        .features__item {
+            padding: 1rem 0;
+        }
     }
 }

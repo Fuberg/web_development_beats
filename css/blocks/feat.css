@@ -24,21 +24,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 128px;
-  height: 128px;
+  width: 8rem;
+  height: 8rem;
   background-color: #F2F5F4;
   border-radius: 50%;
 }
 .feat .feat__icon {
-  width: 68px;
-  height: 68px;
+  width: 4.25rem;
+  height: 4.25rem;
 }
-.feat .feat__name {
-  margin-top: 24px;
+.feat .feat__text-content .feat__name {
+  margin-top: 1.5rem;
 }
-.feat .feat__description {
-  margin-top: 7px;
+.feat .feat__text-content .feat__description {
+  margin-top: 0.5rem;
   line-height: 1.22;
   width: 100%;
   color: #666666;
+}
+
+@media (max-width: 480px) {
+  .feat {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+  .feat .feat__icon-wrap {
+    margin-right: 0.75rem;
+  }
+  .feat .feat__text-content {
+    max-width: 68%;
+  }
 }

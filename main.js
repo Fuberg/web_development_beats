@@ -4,24 +4,26 @@ const list = document.querySelector('.slider__list');
 const list_item = document.querySelector('.slider__item');
 const slider = document.querySelector('.slider');
 
-let list_length = list.getElementsByTagName('li').length;
-let position = 0;
+console.log(list)
 
-console.log(slider.offsetWidth)
+// let list_length = list.getElementsByTagName('li').length;
+// let position = 0;
 
-left.addEventListener('click', function(){
-  if (position != 0) {
-    // console.log("Нажали левую");
-    position--;
-   list.style.left = "-" + (position * slider.offsetWidth) + 'px'
-  }
-});
+// console.log(slider.offsetWidth)
 
-right.addEventListener('click', function(){
+// left.addEventListener('click', function(){
+//   if (position != 0) {
+//     console.log("Нажали левую");
+//     position--;
+//    list.style.left = "-" + (position * slider.offsetWidth) + 'px'
+//   }
+// });
+
+// right.addEventListener('click', function(){
   
-  if (position != (list_length-1)) {
-    // console.log("Нажали правую")
-    position++;
-   list.style.left = "-" + (position * slider.offsetWidth) + 'px'
-  }
-});
+//   if (position != (list_length-1)) {
+//     console.log("Нажали правую")
+//     position++;
+//    list.style.left = "-" + (position * slider.offsetWidth) + 'px'
+//   }
+// });

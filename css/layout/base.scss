@@ -5,8 +5,11 @@
 $dark_text_color: #292929;
 $gray_text_color: #666666;
 $gray_bg_color: #F8FAF9;
+$baseFontSize: 16px;
+$tablets: 768px;
+$phones: 480px;
 
-html {font-size: 16px;}
+html {font-size: $baseFontSize;}
 
 html, body {
     height: 100%;
@@ -93,6 +96,7 @@ h1 {
 h2 {
     font-size: 2.25rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 h3 {

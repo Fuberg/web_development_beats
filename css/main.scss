@@ -1,22 +1,24 @@
-@import url(./layout/fonts.css);
-@import url(./layout/normalize.css);
-@import url(./layout/base.css);
+@import "./layout/fonts";
+@import "./layout/normalize";
+@import "./layout/base";
+@import "./layout/media";
 
-@import url(./blocks/hero.css);
-@import url(./blocks/header.css);
-@import url(./blocks/gamburger.css);
-@import url(./blocks/menu.css);
-@import url(./blocks/phone.css);
-@import url(./blocks/btn.css);
-@import url(./blocks/benefits.css);
-@import url(./blocks/features.css);
-@import url(./blocks/feat.css);
+@import "./blocks/hero";
+@import "./blocks/header";
+@import "./blocks/gamburger";
+@import "./blocks/menu";
+@import "./blocks/phone";
+@import "./blocks/btn";
+@import "./blocks/benefits";
+@import "./blocks/features";
+@import "./blocks/feat";
 
-@import url(./blocks/reviews.css);
-@import url(./blocks/interactive-avatar.css);
-@import url(./blocks/form.css);
-@import url(./blocks/make-order.css);
-@import url(./blocks/fixed-menu.css);
+@import "./blocks/reviews";
+@import "./blocks/interactive-avatar";
+@import "./blocks/form";
+@import "./blocks/make-order";
+@import "./blocks/fixed-menu";
 
-@import url(./blocks/contacts.css);
-@import url(./blocks/socials.css);
+@import "./blocks/contacts";
+@import "./blocks/socials";
+@import "./blocks/slider";

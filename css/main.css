@@ -362,6 +362,7 @@ body {
   line-height: 1.42;
   color: #292929;
   background-color: #fff;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -638,6 +639,9 @@ h3 {
     background-color: transparent;
     z-index: 2;
   }
+  .header .menu {
+    display: none;
+  }
   .header .phone {
     display: none;
   }
@@ -648,6 +652,7 @@ h3 {
   }
 }
 .gamburger {
+  cursor: pointer;
   display: none;
 }
 .gamburger::before {
@@ -702,11 +707,6 @@ h3 {
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-}
 .phone {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1639,11 +1639,12 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200%;
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slide {
@@ -1796,4 +1797,57 @@ h3 {
   transition: max-height 0.4s 0s, padding 0s 0s;
   max-height: 300px;
   padding: 1.75rem 1.625rem 1.5rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  background-color: #313131;
+  z-index: 4;
+  font-size: 2.25rem;
+  color: #FFF;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.overlay .overlay__cross {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #fff;
+  cursor: pointer;
+}
+.overlay .menu {
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlay .menu .menu__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlay .menu .menu__list .menu__item {
+  margin-right: 0;
+  margin-top: 1rem;
+}
+.overlay .menu__item:hover {
+  color: #E01F3D;
 }

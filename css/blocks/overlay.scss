@@ -1,0 +1,50 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    // height: 100vh;
+    height: 0;
+    background-color: #313131;
+    // display: none;
+    z-index: 4;
+    font-size: rem(36px);
+    color: #FFF;
+    text-align: center;
+    transition: 0.4s;
+    overflow: hidden;
+
+    .overlay__cross {
+        position: absolute;
+        top: 42px;
+        right: 42px;
+        width: rem(20px);
+        height: rem(20px);
+        fill: #fff;
+        cursor: pointer;
+    }
+
+    .menu {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menu__list {
+            flex-direction: column;
+            align-items: center;
+
+            .menu__item {
+                margin-right: 0;
+                margin-top: rem(16px);
+            }
+        }
+    }   
+    
+    .menu__item:hover {
+        color: #E01F3D;
+    }
+}
+
+    
+    

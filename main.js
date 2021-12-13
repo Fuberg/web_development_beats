@@ -15,19 +15,22 @@ console.log(list_length)
 
 left.addEventListener('click', function(){
   if (position != 0) {
-    console.log("Нажали левую");
     position--;
-   list.style.left = "-" + (position * slider.offsetWidth) + 'px'
+  } else {
+    position = list_length-1;
   }
+  list.style.left = "-" + (position * slider.offsetWidth) + 'px'
 });
 
 right.addEventListener('click', function(){
   
   if (position != (list_length-1)) {
-    console.log("Нажали правую")
     position++;
-   list.style.left = "-" + (position * slider.offsetWidth) + 'px'
+  } else {
+    position = 0;
   }
+
+  list.style.left = "-" + (position * slider.offsetWidth) + 'px'
 });
 
 // Для работы оверлея 

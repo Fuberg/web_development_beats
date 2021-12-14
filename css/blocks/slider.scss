@@ -59,7 +59,7 @@
         width: 100%;
     }
 
-    .row {
+    .arrow {
         position: absolute;
         transform: translateY(-50%);
         fill: transparent;
@@ -69,7 +69,7 @@
         z-index: 1;
     }
 
-    .slider__left-row {
+    .slider__left-arrow {
         left: 0;
         top: 50%;
 
@@ -84,7 +84,7 @@
         }
     }
 
-    .slider__right-row {
+    .slider__right-arrow {
         right: 0;
         top: 50%;
         @include tablets {

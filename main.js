@@ -1,5 +1,5 @@
-const left = document.querySelector('.slider__left-row');
-const right = document.querySelector('.slider__right-row');
+const left = document.querySelector('.slider__left-arrow');
+const right = document.querySelector('.slider__right-arrow');
 const list = document.querySelector('.slider__list');
 const list_item = document.querySelector('.slider__item');
 const slider = document.querySelector('.slider');
@@ -23,7 +23,6 @@ left.addEventListener('click', function(){
 });
 
 right.addEventListener('click', function(){
-  
   if (position != (list_length-1)) {
     position++;
   } else {

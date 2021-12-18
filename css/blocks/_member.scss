@@ -1,0 +1,110 @@
+.member { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    @include tablets {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    &__avatar {
+        width: rem(220px);
+        height: rem(290px);
+        overflow: hidden;
+        transition: 0.4s;
+
+        img {
+            width: 100%;
+        }
+
+        @include tablets {
+            margin-top: rem(15px);
+            height: auto;
+            max-height: 0;
+        }
+
+        @include phones {
+            width: rem(138px);
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        font-size: rem(18px);
+        font-weight: 700;
+        margin-top: rem(20px);
+        cursor: pointer;
+
+        .member__triangle {
+            margin-left: 4px;
+            width: 9px;
+            height: 9px;
+            transform: rotate(-180deg);
+            transition: 0.4s;
+            fill: #E01F3D;
+        }
+
+        @include tablets {
+            order: -1;
+            font-size: rem(21px);
+
+            .member__triangle {
+                fill: #365A49;
+            }
+        }
+
+        @include phones {
+            .member__triangle {
+                fill: #E01F3D;
+            }
+        }
+    }
+
+    &__info {
+        margin-top: rem(11px); 
+        overflow: hidden;
+        height: auto;
+        max-height: 0;
+        transition: max-height 0.4s 0.0s;
+    }
+
+    &__position {
+        color: #292929;
+
+        @include tablets {
+            font-size: rem(18px);
+            font-weight: 700;
+        }
+    }
+
+    &__position-description {
+        color: #666666;
+        margin-top: rem(4px);
+    }
+}
+
+.member-active {
+    .member__triangle {
+        transform: rotate(0deg);
+    }
+
+    .member__info {
+        max-height: 100px;
+    }
+
+    @include tablets {
+        .member__avatar {
+            max-height: rem(290px);
+        }
+    }
+
+    @include tablets {
+        .member__avatar {
+            max-height: rem(180px);
+        }
+    }
+}

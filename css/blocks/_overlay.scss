@@ -21,12 +21,14 @@
         height: rem(20px);
         fill: #fff;
         cursor: pointer;
+        display: none;
     }
 
     .menu {
         height: 100%;
         margin: 0;
-        display: flex;
+        // display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
 

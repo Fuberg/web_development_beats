@@ -1980,13 +1980,12 @@ h3 {
   height: 1.25rem;
   fill: #fff;
   cursor: pointer;
+  display: none;
 }
 .overlay .menu {
   height: 100%;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

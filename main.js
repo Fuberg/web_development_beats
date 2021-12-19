@@ -31,29 +31,22 @@ right.addEventListener('click', function(){
   list.style.left = "-" + (position * slider.offsetWidth) + 'px'
 });
 
-// Для работы оверлея 
+// Для работы оверлея с меню
 const overlay = document.querySelector('.overlay')
 const close_btn = document.querySelector('.overlay__cross')
 const open_btn = document.querySelector('.gamburger')
 
-// function open_click (){
-//   overlay.style.display = 'block'
-// };
+close_btn.addEventListener('click', function(e){
+  overlay.style.height = '0';
+  $(close_btn).css('display', 'none'); 
+  $(overlay).find('.overlay__menu').css('display', 'none');
+});
 
-// function close_click(){
-//   overlay.style.display = 'none'
-// };
-
-function open_click (){
-    overlay.style.height = '100vh'
-};
-
-function close_click(){
-    overlay.style.height = '0'
-};
-
-close_btn.addEventListener('click', close_click);
-open_btn.addEventListener('click', open_click);
+open_btn.addEventListener('click', function(e){
+  $(close_btn).css('display', 'block'); 
+  $(overlay).find('.overlay__menu').css('display', 'flex');
+  overlay.style.height = '100vh';
+});
 
 
 // Для выдвижения контента в team
@@ -86,5 +79,59 @@ reviews_switcher_item.on('click', function(e){
 
   reviews_list.css('top', need_top);
 });
+
+// Обработка формы 
+const order_form = document.querySelector('.make-order__form');
+const orderBtn = document.querySelector('#orderBtn');
+
+// console.log(JSON.(order_form.elements.comment))
+
+orderBtn.addEventListener('click', e => {
+  e.preventDefault();
+
+  if (validateForm(order_form)) {
+    const data = {
+      name: order_form.elements.name.value,
+      phone: order_form.elements.phone.value,
+      comment: order_form.elements.comment.value,
+      email: 'mail@mail.ru',
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.send(data);
+    xhr.addEventListener('load', () => {
+      if (xhr.response.status) {
+        console.log('Все ОК !');
+      }
+    });
+  }
+
+});
+
+
+function validateForm(form) {
+  let valid = true;
+
+  if (!validateField(form.elements.name)){
+    valid = false;
+  }
+
+  if (!validateField(form.elements.phone)){
+    valid = false;
+  
+  }
+  if (!validateField(form.elements.comment)){
+    valid = false;
+  }
+
+  return valid;
+
+}
+
+function validateField(field){
+  return field.checkValidity();
+}
 
 });

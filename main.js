@@ -83,6 +83,7 @@ reviews_switcher_item.on('click', function(e){
 // Обработка формы 
 const order_form = document.querySelector('.make-order__form');
 const orderBtn = document.querySelector('#orderBtn');
+const overlayMessage = $('.overlay__message');
 
 // console.log(JSON.(order_form.elements.comment))
 
@@ -94,20 +95,37 @@ orderBtn.addEventListener('click', e => {
       name: order_form.elements.name.value,
       phone: order_form.elements.phone.value,
       comment: order_form.elements.comment.value,
-      email: 'mail@mail.ru',
+      to: 'mail@mail.ru',
     }
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.responseType = 'json';
     xhr.setRequestHeader('content-type', 'application/json');
-    xhr.send(data);
+    xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
       if (xhr.response.status) {
-        console.log('Все ОК !');
+        console.log(xhr.response.status);
+        $(overlayMessage).css('display', 'flex');
+        $(overlayMessage).find('.overlay__text').text('Сообщение отправлено');
+        overlay.style.height = '100vh';
+      } 
+      else {
+        console.log(xhr.response.status);
+        $(overlayMessage).css('display', 'flex');
+        $(overlayMessage).find('.overlay__text').text(xhr.response.message);
+        overlay.style.height = '100vh';
       }
     });
   }
 
+});
+
+$(overlayMessage).find('.overlay__btn').on('click', e => {
+  e.preventDefault();
+
+  overlay.style.height = '0';
+  $(overlayMessage).css('display', 'none');
 });
 
 

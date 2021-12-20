@@ -5,7 +5,9 @@
     // height: 100vh;
     height: 0;
     background-color: #313131;
-    // display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 4;
     font-size: rem(36px);
     color: #FFF;
@@ -45,6 +47,25 @@
     
     .menu__item:hover {
         color: #E01F3D;
+    }
+
+    &__message {
+        background-color: #fff;
+        padding: rem(37px) rem(55px);
+        // display: flex;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        color: #000;
+        font-size: rem(18px);
+    }
+
+    &__btn {
+        margin-top: rem(18px);
     }
 }
 

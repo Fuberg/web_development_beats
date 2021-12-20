@@ -149,7 +149,15 @@ function validateForm(form) {
 }
 
 function validateField(field){
-  return field.checkValidity();
+  
+  if (field.checkValidity()){
+    $(field).prev().removeClass('form__error');
+    return true;
+  } else {
+    $(field).prev().addClass('form__error');
+    return false;
+  }
+
 }
 
 });

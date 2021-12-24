@@ -3,6 +3,7 @@
     top: 50vh;
     right: 3%;
     transform: translateY(-50%);
+    z-index: 9;
 
     &__list {
         display: flex;

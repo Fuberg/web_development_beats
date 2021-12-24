@@ -1,0 +1,90 @@
+.design__section {
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    background: url('../img/design.webp') center top no-repeat;
+    background-size: cover;
+    position: relative;
+    // padding: rem(115px) 0 0 rem(84px);
+
+    @include tablets {
+        background-position-x: right 1000px;
+    }
+
+    .section__title {
+        margin: rem(115px) 0 0 rem(84px);
+    }
+} 
+
+.design__list {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+    @include phones {
+        .design__item-active {
+            position: absolute;
+            width: 100%;
+            z-index: 5;
+        }
+    }
+}
+
+.design__item {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    z-index: 3;
+
+    &:nth-child(1) .design__title {
+        background-color: #999999;
+    }
+    &:nth-child(2) .design__title {
+        background-color: #151515;
+    }
+    &:nth-child(3) .design__title {
+        background-color: #E01F3C;
+    }
+
+    
+}
+
+.design__title {
+    font-size: rem(36px);
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+    padding: rem(34px) rem(30px);
+    line-height: 1.0;
+    cursor: pointer;
+}
+
+.design__description {
+    background-color: rgba(51, 53, 55, 0.9);
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: padding 0.05s 0.2s, width 0.4s 0.0s, opacity 0.4s 0.0s, 0.4s;
+}
+
+.design__item-active {
+    
+    // width: 45%;
+    @include tablets {
+        flex: 1;
+    }
+
+    .design__description {
+        width: 44vw;
+        padding: rem(31px) rem(53px) rem(31px) rem(38px);
+        opacity: 1;
+        @include tablets {
+            flex: 1;
+        }
+        // transition: padding 0.0s 0.0s, width 0.4s 0.0s, opacity 0.4s 0.0s;
+    }
+} 

@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     margin-top: rem(41px);
     padding: 0 rem(80px);
+    min-height: rem(500px);
 
     @include tablets {
         flex-direction: column;

@@ -1,29 +1,3 @@
-@import "./layout/fonts";
-@import "./layout/base";
-@import "./layout/media";
+@import "./layout/*.scss";
 
-@import "./blocks/hero";
-@import "./blocks/header";
-@import "./blocks/gamburger";
-@import "./blocks/menu";
-@import "./blocks/phone";
-@import "./blocks/btn";
-@import "./blocks/benefits";
-@import "./blocks/features";
-@import "./blocks/feat";
-
-@import "./blocks/reviews";
-@import "./blocks/interactive-avatar";
-@import "./blocks/form";
-@import "./blocks/make-order";
-@import "./blocks/fixed-menu";
-
-@import "./blocks/contacts";
-@import "./blocks/socials";
-@import "./blocks/slider";
-@import "./blocks/overlay";
-
-@import "./blocks/team";
-@import "./blocks/member";
-
-@import "./blocks/design";
+@import "./blocks/*.scss";

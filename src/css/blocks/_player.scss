@@ -1,0 +1,147 @@
+.player-section {
+    background-color:rgba(248, 250, 249, 1);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.player {
+    width: rem(660px);
+    height: rem(390px);
+    margin-top: rem(44px);
+    position: relative;
+
+    @include tablets {
+        width: 77vw;
+        height: 45vw;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__splash {
+        width: 100%;
+        height: 100%;
+        // background: url("./img/player__splash.png");
+        background: url("./img/player__splash.png") center top no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+        &-start {
+            width: rem(48.56px);
+            height: rem(70.94px);
+        }
+    }
+
+    &__controls {
+        width: 100%;
+        height: rem(34.89px);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #151515;
+        padding: 0 rem(17px);
+    }
+
+    &__start {
+        width: rem(10.92px);
+        height: rem(15.95px);
+        cursor: pointer;
+        
+        &-triangle {
+            width: rem(10.92px);
+            height: rem(15.95px);
+        }
+    }
+
+    &__playback {
+        margin-left: rem(29.13px);
+        margin-right: rem(42px);
+        height: 4px;
+        background-color: #333;
+        flex: 1;
+        position: relative;
+        cursor: pointer;
+
+        &-progress {
+            // content: "";
+            display: block;
+            position: absolute;
+            height: 4px;
+            background-color: #E01F3D;
+            width: 0%;
+        }
+
+        &-button {
+            width: rem(15px);
+            height: rem(15px);
+            background-color: #E01F3D;
+            border-radius: 50%;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+
+    &__duration {
+        color: #fff;
+    }
+
+    &.active {
+        .player__splash {
+            display: none;
+        }
+    }
+
+    &.paused {
+        .player__splash {
+            display: none;
+        }
+
+        .player__start {
+            position: relative;
+
+            &-triangle{
+                display: none;
+            }
+
+            &::before {
+                content: "";
+                height: 100%;
+                width: 4px;
+                border-radius: 2px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 4px;
+                border-radius: 2px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

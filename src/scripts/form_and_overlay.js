@@ -4,10 +4,15 @@ $( document ).ready(function() {
 const overlay = document.querySelector('.overlay')
 const close_btn = document.querySelector('.overlay__cross')
 const open_btn = document.querySelector('.gamburger')
-const menu_item = $(".overlay__menu").children(".menu__item");
-
+const menu_item = $(".overlay__menu").find(".menu__item");
 
 close_btn.addEventListener('click', function(e){
+  overlay.style.height = '0';
+  $(close_btn).css('display', 'none'); 
+  $(overlay).find('.overlay__menu').css('display', 'none');
+});
+
+menu_item.on('click', function(e){
   overlay.style.height = '0';
   $(close_btn).css('display', 'none'); 
   $(overlay).find('.overlay__menu').css('display', 'none');

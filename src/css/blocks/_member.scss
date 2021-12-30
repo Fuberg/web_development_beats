@@ -83,7 +83,7 @@
     }
 
     &__position-description {
-        color: #666666;
+        color: #666;
         margin-top: rem(4px);
     }
 }
@@ -104,9 +104,10 @@
         }
     }
 
-    @include tablets {
+    @include phones {
         .member__avatar {
-            max-height: rem(180px);
+            min-height: rem(181px);
+            max-height: rem(181px);
         }
     }
 }
